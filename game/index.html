@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	      <link rel="stylesheet" href="picnic.css">
 		<title>Игра</title> 
 		<style>
 		p {
 			color: #994d00;
-			letter-spacing: 2px;
-			text-indent: 185px;
-			font-family: sans-serif;
-			text-align: justify;
 		}
 		p.groove {border-style: groove;}
 		canvas {
@@ -18,8 +15,24 @@
 		</style>
 	</head>
 <body>
-		<p>Sonic</p>	
-		<canvas id="gCanvas"></canvas>
+		
+		<div class="flex tree">
+			<article class="card">
+				<p>Sonic</p>	
+			</article>
+			<div>
+				<article class="card">
+					<canvas id="gCanvas"></canvas>
+				</article>
+			</div>
+			
+			<div>
+				<article class="card">
+					<canvas id="menu"></canvas>
+				</article>
+			</div>
+			
+		</div>
 		<script src="k.js"></script>
 </body>
 </html>
