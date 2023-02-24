@@ -3,28 +3,53 @@ let menu = document.getElementById("menu");
 let context = canvas.getContext("2d");
 let contextMenu = menu.getContext("2d");
 
+
+
+
 let nx = 40;
 let ny = 25;
 let sqside = 22;
 let hx=3;
 let hy=2;
+
+
+
 let himg = new Image();
 himg.src = "h.png";
 canvas.width=nx*sqside;
 canvas.height=ny*sqside;
+
+menu.width=700;
+menu.height=250;
 let bgimg = new Image();
 bgimg.src = "bg_karta.jpg";
-
-
 
 let gabrovo = new Image();
 gabrovo.src = "gabrovo.jpg";
 
-function drawObekt(){
+let sofia = new Image();
+sofia.src = "sofia.png";
 
-contextMenu.drawImage(gabrovo, 0,0);
 
-}
+
+
+
+		function drawGabrovo(){
+
+		contextMenu.drawImage(gabrovo, 0,0);
+
+		}
+		function drawSofia(){
+
+		contextMenu.drawImage(sofia, 0,0);
+
+		}
+		
+		function draw_def(){
+		contextMenu.drawImage(himg, 0,0);
+
+		
+		}
 
 function drawMap() {
 
@@ -92,8 +117,26 @@ function mqsto(){
 if (hx==19 && hy==10)
 	{
 			console.log ("В Габрово");
-			drawObekt()
+			drawGabrovo();
 	}
+else if (hx==8 && hy==11)
+	{
+			console.log ("В София");
+			drawSofia();
+	}
+else 
+	{	
+		contextMenu.clearRect(0,0, menu.width ,menu.height);
+		draw_def();
+	}
+}
+
+
+function deistvie()
+{
+	let tb = document.getElementById("tb").value;
+	let dumi = tb.split(" ");
+	console.log (dumi[1]);
 }
 
 document.onkeypress = function(e){
@@ -107,10 +150,12 @@ document.onkeypress = function(e){
 			case "s": moveDown(); break;
 			case "d": moveRight(); break;
 			case "w": moveUp(); break;
+			case "g": deistvie();break;
 			}
 			
 	console.log (hx + " " + hy);
 	mqsto();
+	
 }
 
 

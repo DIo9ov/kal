@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	      <link rel="stylesheet" href="picnic.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
 		<title>Игра</title> 
 		<style>
 		p {
 			color: #994d00;
 		}
-		p.groove {border-style: groove;}
+	
 		canvas {
 			border: 1px rgb(204, 255, 204);
 	                background-color: green;
-	        	}
+	               }
 		</style>
 	</head>
 <body>
 		
-		<div class="flex tree">
-			<article class="card">
-				<p>Sonic</p>	
-			</article>
-			<div>
+		<div class="flex two">
+			
+			<div>	
 				<article class="card">
 					<canvas id="gCanvas"></canvas>
 				</article>
@@ -28,10 +26,19 @@
 			
 			<div>
 				<article class="card">
-					<canvas id="menu"></canvas>
+					<canvas id="menu" ></canvas>
 				</article>
 			</div>
-			
+			<div>
+			</div>
+			<div>
+			<p style="padding-left:5%">Срещаш странник</p>
+			</div>
+			<div>
+			</div>
+			<div>
+			  <input id="tb">
+			</div>
 		</div>
 		<script src="k.js"></script>
 </body>

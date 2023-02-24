@@ -1,0 +1,3 @@
+let vhod = document.getElementById("vhod").value;
+let words = vhod.split(" ");
+let masiv = ["dasdw" , 3, ["r"]];
